@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/top_ll"
+              tools:context=".MainActivity"
+              tools:ignore="HardcodedText"
+              android:orientation="vertical">
+
+  <LinearLayout
+    style="@style/horiz_ll">
+    <TextView
+      android:id="@+id/yellow"
+      android:text="YELLOW"
+      android:background="@color/yellow_primary"
+      android:layout_gravity="left"
+      style="@style/text_box"
+      android:transitionName="yellow_diagonal"/>
+    <TextView
+      android:text="ORANGE"
+      android:background="@color/orange_primary"
+      android:layout_gravity="right"
+      style="@style/text_box"/>
+  </LinearLayout>
+
+  <LinearLayout
+    style="@style/horiz_ll">
+    <TextView
+      android:text="GREY"
+      android:layout_gravity="left"
+      android:background="@color/grey_primary"
+      style="@style/text_box"/>
+    <TextView
+      android:id="@+id/blue"
+      android:text="BLUE"
+      android:layout_gravity="right"
+      style="@style/text_box"
+      android:background="@color/blue_primary"
+      android:transitionName="blue_diagonal"
+      />
+  </LinearLayout>
+
+</LinearLayout>
