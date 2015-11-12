@@ -37,6 +37,7 @@
       android:padding="50dp"
       android:textSize="30sp"
       android:background="@color/indigo_primary"
+      android:transitionName="transition_from_top_to_bottom"
       />
   </RelativeLayout>
 

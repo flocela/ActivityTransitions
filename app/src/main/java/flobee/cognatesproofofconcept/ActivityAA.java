@@ -4,10 +4,6 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.Fade;
-import android.transition.Slide;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,38 +20,20 @@ public class ActivityAA extends Activity {
     startingTopTextView.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(ActivityAA.this);
         Intent i = new Intent(ActivityAA.this, ActivityBB.class);
 
-        //View sharedView = startingTopTextView;
+        View sharedView = startingTopTextView;
 
-        //ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(ActivityAA.this, sharedView, "transition_from_top_to_bottom");
-        startActivity(i, options.toBundle());
+        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(ActivityAA.this, sharedView, "transition_from_top_to_bottom");
+        startActivity(i, transitionActivityOptions.toBundle());
       }
     });
   }
 
-  private void setupWindowAnimations() {
-    Slide slideLeft = new Slide();
-    slideLeft.setDuration(500);
-    slideLeft.setSlideEdge(Gravity.LEFT);
-    getWindow().setExitTransition(slideLeft);
-
-    Slide slideRight = new Slide();
-    slideRight.setDuration(500);
-    slideRight.setSlideEdge(Gravity.RIGHT);
-    getWindow().setReturnTransition(slideRight);
-
-    Fade fade = new Fade();
-    fade.setDuration(1000);
-    getWindow().setEnterTransition(fade);
-    getWindow().setReenterTransition(fade);
-
-    Log.i("TAG", "in AA: enterTransition:   " + getWindow().getEnterTransition());
-    Log.i("TAG", "in AA: ReenterTransition: " + getWindow().getReenterTransition());
-    Log.i("TAG", "in AA: ExitTransition:    " + getWindow().getExitTransition());
-    Log.i("TAG", "in AA: ReturnTranstion:   " + getWindow().getReturnTransition());
+  private void setupWindowAnimations () {
+    //Fade fade = new Fade();
+    //fade.setDuration(5000);
+    //getWindow().setSharedElementEnterTransition(fade);
   }
 
   @Override
