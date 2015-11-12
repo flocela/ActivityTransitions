@@ -4,9 +4,12 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ActivityAA extends Activity {
@@ -15,26 +18,43 @@ public class ActivityAA extends Activity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.starting_activity);
-    final TextView startingTopTextView = (TextView)findViewById(R.id.starting_top);
+    final ImageView indigoDot = (ImageView)findViewById(R.id.indigo_dot);
     setupWindowAnimations();
-    startingTopTextView.setOnClickListener(new View.OnClickListener() {
+    indigoDot.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         Intent i = new Intent(ActivityAA.this, ActivityBB.class);
 
-        View sharedView = startingTopTextView;
+        View sharedView = indigoDot;
 
-        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(ActivityAA.this, sharedView, "transition_from_top_to_bottom");
+        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(ActivityAA.this, sharedView, "dot_transition");
+        startActivity(i, transitionActivityOptions.toBundle());
+      }
+    });
+    final TextView bottomText = (TextView)findViewById(R.id.bottom_text);
+    bottomText.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent i = new Intent(ActivityAA.this, ActivityBB.class);
+
+        View sharedView = indigoDot;
+
+        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(ActivityAA.this, sharedView, "dot_transition");
         startActivity(i, transitionActivityOptions.toBundle());
       }
     });
   }
 
-  private void setupWindowAnimations () {
-    //Fade fade = new Fade();
-    //fade.setDuration(5000);
-    //getWindow().setSharedElementEnterTransition(fade);
+  private void setupWindowAnimations() {
+    // Re-enter transition is executed when returning to this activity
+    Slide slideTransition = new Slide();
+    slideTransition.setSlideEdge(Gravity.LEFT);
+    slideTransition.setDuration(600);
+    getWindow().setReenterTransition(slideTransition);
+    getWindow().setExitTransition(slideTransition);
   }
+
+
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {

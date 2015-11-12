@@ -8,35 +8,112 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity"
                 android:orientation="vertical">
-  <RelativeLayout
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp">
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:src="@drawable/circle_24dp"
+      android:tint="@color/blue_grey_primary"/>
     <TextView
-      android:id="@+id/starting_top"
+      android:id="@+id/top_text"
       android:text="Starting on Top"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="50dp"
+      android:padding="10dp"
       android:textSize="30sp"
-      android:background="@color/indigo_primary"
-      android:transitionName="transition_from_top_to_bottom"
-      android:clickable="true"/>
-  </RelativeLayout>
+      android:clickable="true"
+      android:layout_gravity="center_vertical"/>
+  </LinearLayout>
 
-  <RelativeLayout
+  <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:src="@drawable/circle_24dp"
+      android:tint="@color/orange_primary"/>
     <TextView
-      android:id="@+id/starting_bottom"
+      android:id="@+id/middle_text_1"
       android:text="Starting At the Bottom"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="50dp"
+      android:padding="10dp"
       android:textSize="30sp"
-      android:background="@color/blue_grey_primary"/>
-  </RelativeLayout>
+      android:layout_gravity="center_vertical"/>
+  </LinearLayout>
 
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:src="@drawable/circle_24dp"
+      android:tint="@color/yellow_primary"/>
+    <TextView
+      android:id="@+id/middle_text_2"
+      android:text="Starting At the Bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:textSize="30sp"
+      android:layout_gravity="center_vertical"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:src="@drawable/circle_24dp"/>
+    <TextView
+      android:id="@+id/middle_text_3"
+      android:text="Starting At the Bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:textSize="30sp"
+      android:layout_gravity="center_vertical"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+    <ImageView
+      android:id="@+id/indigo_dot"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:src="@drawable/circle_24dp"
+      android:tint="@color/indigo_primary"
+      android:transitionName="dot_transition"
+      android:clickable="true"/>
+    <TextView
+      android:id="@+id/bottom_text"
+      android:text="Starting At the Bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:textSize="30sp"
+      android:layout_gravity="center_vertical"/>
+  </LinearLayout>
 
 </LinearLayout>
