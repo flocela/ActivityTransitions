@@ -12,6 +12,7 @@
       android:background="@color/yellow_primary"
       android:layout_gravity="left"
       style="@style/text_box"
+      android:transitionName="yellow_diagonal"
       />
     <TextView
       android:text="ORANGE"
@@ -33,6 +34,7 @@
       android:layout_gravity="right"
       style="@style/text_box"
       android:background="@color/blue_primary"
+      android:transitionName="blue_diagonal"
       />
   </LinearLayout>
 

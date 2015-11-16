@@ -1,8 +1,12 @@
 package flobee.cognatesproofofconcept;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Slide;
+import android.util.Pair;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -19,21 +23,26 @@ public class StartActivity extends Activity {
       @Override
       public void onClick(View v) {
         Intent i = new Intent(StartActivity.this, EndActivity.class);
-        startActivity(i);
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(
+          StartActivity.this,
+          new Pair<View, String>(yellowTextView, "yellow_diagonal"),
+          new Pair<View, String>(blueTextView, "blue_diagonal"));
+        startActivity(i, options.toBundle());
       }
     });
   }
 
   private void setupWindowAnimations () {
-    /*Slide slideLeft = new Slide();
+    Slide slideLeft = new Slide();
     slideLeft.setDuration(500);
     slideLeft.setSlideEdge(Gravity.LEFT);
-    getWindow().setEnterTransition(slideLeft);
-    getWindow().setExitTransition(slideLeft);
-    */
-    /*(slideLeft.excludeTarget(android.R.id.statusBarBackground, true);
+    slideLeft.excludeTarget(android.R.id.statusBarBackground, true);
     slideLeft.excludeTarget(android.R.id.navigationBarBackground, true);
-    slideLeft.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);*/
+    slideLeft.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
+    getWindow().setEnterTransition(null);
+    getWindow().setExitTransition(null);
+
+
 
   }
 }
