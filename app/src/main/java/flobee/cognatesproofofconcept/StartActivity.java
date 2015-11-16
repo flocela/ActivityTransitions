@@ -1,10 +1,8 @@
 package flobee.cognatesproofofconcept;
 
 import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.Slide;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,22 +19,21 @@ public class StartActivity extends Activity {
       @Override
       public void onClick(View v) {
         Intent i = new Intent(StartActivity.this, EndActivity.class);
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(StartActivity.this);
-        startActivity(i, options.toBundle());
+        startActivity(i);
       }
     });
   }
 
   private void setupWindowAnimations () {
-    Slide slideLeft = new Slide();
+    /*Slide slideLeft = new Slide();
     slideLeft.setDuration(500);
+    slideLeft.setSlideEdge(Gravity.LEFT);
     getWindow().setEnterTransition(slideLeft);
     getWindow().setExitTransition(slideLeft);
-  }
-
-  /*
-    slideLeft.excludeTarget(android.R.id.statusBarBackground, true);
+    */
+    /*(slideLeft.excludeTarget(android.R.id.statusBarBackground, true);
     slideLeft.excludeTarget(android.R.id.navigationBarBackground, true);
-    slideLeft.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
-   */
+    slideLeft.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);*/
+
+  }
 }
