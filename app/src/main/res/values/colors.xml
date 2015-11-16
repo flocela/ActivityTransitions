@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="blue_grey_primary">#607D8B</color>
+  <color name="grey_primary">#607D8B</color>
   <color name="indigo_primary">#3F51B5</color>
   <color name="yellow_primary">#FFEB3B</color>
   <color name="orange_primary">#ff9800</color>

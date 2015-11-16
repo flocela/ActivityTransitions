@@ -7,5 +7,50 @@
     <item name="android:windowAllowEnterTransitionOverlap">true</item>
     <item name="android:windowAllowReturnTransitionOverlap">true</item>
   </style>
+  <style name="dot_image">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:src">@drawable/circle_24dp</item>
+  </style>
+  <style name="row">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">20dp</item>
+    <item name="android:layout_marginBottom">20dp</item>
+    <item name="android:orientation">horizontal</item>
+  </style>
+  <style name="color_text_view">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">10dp</item>
+    <item name="android:textSize">30sp</item>
+    <item name="android:layout_gravity">center_vertical</item>
+  </style>
+  <style name="start_view">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:orientation">vertical</item>
+  </style>
+  <style name="end_view">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:orientation">vertical</item>
+    <item name="android:layout_gravity">center_vertical</item>
+  </style>
+  <style name="single_dot">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:src">@drawable/circle_24dp</item>
+    <item name="android:layout_gravity">center_horizontal</item>
+  </style>
+  <style name="paragraph">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">10dp</item>
+    <item name="android:textSize">30sp</item>
+  </style>
+
 
 </resources>

@@ -1,119 +1,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity"
-                android:orientation="vertical">
+                style="@style/start_view">
   <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp"
-    android:orientation="horizontal">
+    style="@style/row">
     <ImageView
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:src="@drawable/circle_24dp"
-      android:tint="@color/blue_grey_primary"/>
+      style="@style/dot_image"
+      android:tint="@color/grey_primary"/>
     <TextView
-      android:id="@+id/top_text"
-      android:text="Starting on Top"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="10dp"
-      android:textSize="30sp"
-      android:clickable="true"
-      android:layout_gravity="center_vertical"/>
+      android:text="Blue Grey"
+      style="@style/color_text_view"/>
   </LinearLayout>
 
   <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp"
-    android:orientation="horizontal">
+    style="@style/row">
     <ImageView
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:src="@drawable/circle_24dp"
+      style="@style/dot_image"
       android:tint="@color/orange_primary"/>
     <TextView
-      android:id="@+id/middle_text_1"
-      android:text="Starting At the Bottom"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="10dp"
-      android:textSize="30sp"
-      android:layout_gravity="center_vertical"/>
+      style="@style/color_text_view"
+      android:text="Orange"/>
   </LinearLayout>
 
   <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp"
-    android:orientation="horizontal">
+    style="@style/row">
     <ImageView
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:src="@drawable/circle_24dp"
+      style="@style/dot_image"
       android:tint="@color/yellow_primary"/>
     <TextView
-      android:id="@+id/middle_text_2"
-      android:text="Starting At the Bottom"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="10dp"
-      android:textSize="30sp"
-      android:layout_gravity="center_vertical"/>
+      android:text="Yellow"
+      style="@style/color_text_view"/>
   </LinearLayout>
 
   <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp"
-    android:orientation="horizontal">
+    style="@style/row">
     <ImageView
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:src="@drawable/circle_24dp"/>
+      style="@style/dot_image"/>
     <TextView
-      android:id="@+id/middle_text_3"
-      android:text="Starting At the Bottom"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="10dp"
-      android:textSize="30sp"
-      android:layout_gravity="center_vertical"/>
+      android:text="Black"
+      style="@style/color_text_view"/>
   </LinearLayout>
 
   <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp"
-    android:orientation="horizontal">
+    style="@style/row">
     <ImageView
       android:id="@+id/indigo_dot"
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:src="@drawable/circle_24dp"
+      style="@style/dot_image"
       android:tint="@color/indigo_primary"
       android:transitionName="dot_transition"
       android:clickable="true"/>
     <TextView
       android:id="@+id/bottom_text"
-      android:text="Starting At the Bottom"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="10dp"
-      android:textSize="30sp"
-      android:layout_gravity="center_vertical"/>
+      style="@style/color_text_view"
+      android:text="Indigo"/>
   </LinearLayout>
 
 </LinearLayout>
