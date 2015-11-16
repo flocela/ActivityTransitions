@@ -2,8 +2,6 @@ package flobee.cognatesproofofconcept;
 
 import android.animation.Animator;
 import android.app.Activity;
-import android.app.ActivityOptions;
-import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Fade;
 import android.transition.Transition;
@@ -11,14 +9,10 @@ import android.transition.TransitionInflater;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AnimationUtils;
-import android.view.animation.Interpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ActivityBB extends Activity {
-
-  private Interpolator interpolator;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -26,25 +20,12 @@ public class ActivityBB extends Activity {
     setContentView(R.layout.ending_activity);
     final TextView endingBottomTextView = (TextView)findViewById(R.id.paragraph);
     setupWindowAnimations();
-    endingBottomTextView.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent i = new Intent(ActivityBB.this, ActivityAA.class);
-
-        View sharedView = endingBottomTextView;
-
-        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(ActivityBB.this, sharedView, "transition_from_top_to_bottom");
-        startActivity(i, transitionActivityOptions.toBundle());
-      }
-    });
   }
 
   private void setupWindowAnimations() {
-    interpolator = AnimationUtils.loadInterpolator(this, android.R.interpolator.linear_out_slow_in);
     setupEnterAnimations();
     setupExitAnimations();
   }
-
 
   private void setupEnterAnimations () {
     Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.changebounds_with_arcmotion);
@@ -52,10 +33,10 @@ public class ActivityBB extends Activity {
     transition.addListener(new Transition.TransitionListener() {
       @Override
       public void onTransitionEnd(Transition transition) {
-        transition.removeListener(this);
-        ImageView circle = (ImageView) findViewById(R.id.top_dot);
-        View rootView = findViewById(R.id.root_view);
-        animateRevealShow(rootView, circle);
+       transition.removeListener(this);
+       ImageView dot = (ImageView) findViewById(R.id.top_dot);
+       View rootView = findViewById(R.id.root_view);
+       animateRevealShow(rootView, dot);
       }
 
       @Override
@@ -79,10 +60,8 @@ public class ActivityBB extends Activity {
 
   private void setupExitAnimations() {
     Fade returnTransition = new Fade();
-    getWindow().setReturnTransition(returnTransition);
-    returnTransition.setDuration(300);
-    returnTransition.setStartDelay(300);
-    returnTransition.addListener(new Transition.TransitionListener() {
+    returnTransition.setDuration(500);
+    returnTransition.addListener(new Transition.TransitionListener(){
       @Override
       public void onTransitionStart(Transition transition) {
         transition.removeListener(this);
