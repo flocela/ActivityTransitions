@@ -2,20 +2,17 @@
               xmlns:tools="http://schemas.android.com/tools"
               style="@style/top_ll"
               tools:context=".MainActivity"
-              android:orientation="vertical"
-              android:id="@+id/start"
-              android:transitionName="top">
+              android:orientation="vertical">
 
   <LinearLayout
-    style="@style/horiz_ll"
-    android:id="@+id/top">
+    style="@style/horiz_ll">
     <TextView
       android:id="@+id/yellow"
       android:text="YELLOW"
       android:background="@color/yellow_primary"
       android:layout_gravity="left"
       style="@style/text_box"
-      android:transitionName="yellow_diagonal"/>
+      />
     <TextView
       android:text="ORANGE"
       android:background="@color/orange_primary"
@@ -24,8 +21,7 @@
   </LinearLayout>
 
   <LinearLayout
-    style="@style/horiz_ll"
-    android:id="@+id/bottom">
+    style="@style/horiz_ll">
     <TextView
       android:text="GREY"
       android:layout_gravity="left"
@@ -37,7 +33,6 @@
       android:layout_gravity="right"
       style="@style/text_box"
       android:background="@color/blue_primary"
-      android:transitionName="blue_diagonal"
       />
   </LinearLayout>
 

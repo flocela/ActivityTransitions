@@ -32,10 +32,10 @@ public class EndActivity extends Activity {
     Slide slideRight = new Slide();
     slideRight.setDuration(500);
     slideRight.setSlideEdge(Gravity.RIGHT);
-    slideRight.excludeTarget(android.R.id.statusBarBackground, true);
-    slideRight.excludeTarget(android.R.id.navigationBarBackground, true);
-    slideRight.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
     getWindow().setEnterTransition(slideRight);
     getWindow().setExitTransition(slideRight);
+    /*slideRight.excludeTarget(android.R.id.statusBarBackground, true);
+    slideRight.excludeTarget(android.R.id.navigationBarBackground, true);
+    slideRight.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);*/
   }
 }

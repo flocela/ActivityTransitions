@@ -5,7 +5,6 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.transition.Slide;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -31,11 +30,13 @@ public class StartActivity extends Activity {
   private void setupWindowAnimations () {
     Slide slideLeft = new Slide();
     slideLeft.setDuration(500);
-    slideLeft.setSlideEdge(Gravity.LEFT);
-    slideLeft.excludeTarget(android.R.id.statusBarBackground, true);
-    slideLeft.excludeTarget(android.R.id.navigationBarBackground, true);
-    slideLeft.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
     getWindow().setEnterTransition(slideLeft);
     getWindow().setExitTransition(slideLeft);
   }
+
+  /*
+    slideLeft.excludeTarget(android.R.id.statusBarBackground, true);
+    slideLeft.excludeTarget(android.R.id.navigationBarBackground, true);
+    slideLeft.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
+   */
 }
