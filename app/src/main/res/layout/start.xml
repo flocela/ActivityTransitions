@@ -2,11 +2,13 @@
               xmlns:tools="http://schemas.android.com/tools"
               style="@style/top_ll"
               tools:context=".MainActivity"
-              tools:ignore="HardcodedText"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:id="@+id/start"
+              android:transitionName="top">
 
   <LinearLayout
-    style="@style/horiz_ll">
+    style="@style/horiz_ll"
+    android:id="@+id/top">
     <TextView
       android:id="@+id/yellow"
       android:text="YELLOW"
@@ -22,7 +24,8 @@
   </LinearLayout>
 
   <LinearLayout
-    style="@style/horiz_ll">
+    style="@style/horiz_ll"
+    android:id="@+id/bottom">
     <TextView
       android:text="GREY"
       android:layout_gravity="left"

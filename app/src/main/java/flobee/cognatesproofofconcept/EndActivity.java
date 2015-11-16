@@ -1,9 +1,11 @@
 package flobee.cognatesproofofconcept;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.Fade;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -12,7 +14,7 @@ public class EndActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.end_ex2);
+    setContentView(R.layout.end);
     final TextView yellowTextView = (TextView)findViewById(R.id.yellow);
     final TextView blueTextView   = (TextView)findViewById(R.id.blue);
     setupWindowAnimations();
@@ -20,14 +22,20 @@ public class EndActivity extends Activity {
       @Override
       public void onClick(View v) {
         Intent i = new Intent(EndActivity.this, StartActivity.class);
-        startActivity(i);
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(EndActivity.this);
+        startActivity(i, options.toBundle());
       }
     });
   }
 
   private void setupWindowAnimations () {
-    Fade fade = new Fade();
-    fade.setDuration(3000);
-    getWindow().setEnterTransition(fade);
+    Slide slideRight = new Slide();
+    slideRight.setDuration(500);
+    slideRight.setSlideEdge(Gravity.RIGHT);
+    slideRight.excludeTarget(android.R.id.statusBarBackground, true);
+    slideRight.excludeTarget(android.R.id.navigationBarBackground, true);
+    slideRight.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
+    getWindow().setEnterTransition(slideRight);
+    getWindow().setExitTransition(slideRight);
   }
 }

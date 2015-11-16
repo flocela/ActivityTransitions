@@ -3,9 +3,12 @@
               style="@style/top_ll"
               tools:context=".MainActivity"
               tools:ignore="HardcodedText"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:id="@+id/end"
+              android:transitionName="top">
 
   <LinearLayout
+    android:id="@+id/top"
     style="@style/horiz_ll">
     <TextView
       android:id="@+id/blue"
@@ -22,6 +25,7 @@
   </LinearLayout>
 
   <LinearLayout
+    android:id="@+id/bottom"
     style="@style/horiz_ll">
     <TextView
       android:text="GREY"
