@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class ActivityBB extends Activity {
 
@@ -18,7 +17,6 @@ public class ActivityBB extends Activity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.ending_activity);
-    final TextView endingBottomTextView = (TextView)findViewById(R.id.paragraph);
     setupWindowAnimations();
   }
 
@@ -54,35 +52,12 @@ public class ActivityBB extends Activity {
       @Override
       public void onTransitionResume(Transition transition) {
       }
-
     });
   }
 
   private void setupExitAnimations() {
     Fade returnTransition = new Fade();
     returnTransition.setDuration(500);
-    returnTransition.addListener(new Transition.TransitionListener(){
-      @Override
-      public void onTransitionStart(Transition transition) {
-        transition.removeListener(this);
-      }
-
-      @Override
-      public void onTransitionEnd(Transition transition) {
-      }
-
-      @Override
-      public void onTransitionCancel(Transition transition) {
-      }
-
-      @Override
-      public void onTransitionPause(Transition transition) {
-      }
-
-      @Override
-      public void onTransitionResume(Transition transition) {
-      }
-    });
   }
 
 
