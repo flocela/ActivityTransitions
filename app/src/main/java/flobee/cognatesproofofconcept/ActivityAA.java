@@ -15,7 +15,7 @@ public class ActivityAA extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.starting_activity);
+    setContentView(R.layout.aa_layout);
     final ImageView indigoDot = (ImageView)findViewById(R.id.indigo_dot);
     setupWindowAnimations();
     indigoDot.setOnClickListener(new View.OnClickListener() {
