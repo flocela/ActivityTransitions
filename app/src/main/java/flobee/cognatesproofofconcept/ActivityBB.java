@@ -4,12 +4,9 @@ import android.animation.Animator;
 import android.app.Activity;
 import android.os.Bundle;
 import android.transition.Fade;
-import android.transition.Transition;
-import android.transition.TransitionInflater;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.animation.AccelerateInterpolator;
-import android.widget.ImageView;
 
 public class ActivityBB extends Activity {
 
@@ -26,7 +23,7 @@ public class ActivityBB extends Activity {
   }
 
   private void setupEnterAnimations () {
-    Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.changebounds_with_arcmotion);
+    /*Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.changebounds_with_arcmotion);
     getWindow().setSharedElementEnterTransition(transition);
     transition.addListener(new Transition.TransitionListener() {
       @Override
@@ -52,7 +49,7 @@ public class ActivityBB extends Activity {
       @Override
       public void onTransitionResume(Transition transition) {
       }
-    });
+    });*/
   }
 
   private void setupExitAnimations() {
