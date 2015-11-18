@@ -5,6 +5,7 @@ branch: simpletransitions shows the whole activity window sliding and also share
 branch: circular_reveal shows a dot in one activity moving in an arc motion to its spot in the next activity and the circular reveal of text below the dot.
 
 Websites used to make Activity Transition demos. I recommend them for learning Activity Transitions.
+
 DESIGN:
 
 Great Examples of Material Design:
