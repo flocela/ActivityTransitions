@@ -1,6 +1,9 @@
 # ActivityTransitions
 Demo for Activity Transitions to Demonstrate Material Design
 
+branch: simpletransitions shows the whole activity window sliding and also shared element views exchanging places.
+branch: circular_reveal shows a dot in one activity moving in an arc motion to its spot in the next activity and the circular reveal of text below the dot.
+
 Websites used to make Activity Transition demos. I recommend them for learning Activity Transitions.
 DESIGN:
 Great Examples of Material Design:
