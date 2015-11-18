@@ -39,8 +39,8 @@ public class EndActivity extends Activity {
     slideRight.excludeTarget(android.R.id.statusBarBackground, true);
     slideRight.excludeTarget(android.R.id.navigationBarBackground, true);
     slideRight.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
-    getWindow().setEnterTransition(null);
-    getWindow().setExitTransition(null);
+    getWindow().setEnterTransition(null);// put slideRight as argument for whole Activity View to move
+    getWindow().setExitTransition(null);// put slideRight as argument for whole Activity View to move
   }
 
 }

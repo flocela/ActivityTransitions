@@ -39,10 +39,7 @@ public class StartActivity extends Activity {
     slideLeft.excludeTarget(android.R.id.statusBarBackground, true);
     slideLeft.excludeTarget(android.R.id.navigationBarBackground, true);
     slideLeft.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
-    getWindow().setEnterTransition(null);
-    getWindow().setExitTransition(null);
-
-
-
+    getWindow().setEnterTransition(null);// put slideLeft as argument for whole Activity View to move
+    getWindow().setExitTransition(null);// put slideLeft as argument for whole Activity View to move
   }
 }
