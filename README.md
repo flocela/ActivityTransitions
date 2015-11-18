@@ -6,6 +6,7 @@ branch: circular_reveal shows a dot in one activity moving in an arc motion to i
 
 Websites used to make Activity Transition demos. I recommend them for learning Activity Transitions.
 DESIGN:
+
 Great Examples of Material Design:
 http://blog.webbb.be/material-design-animation-examples/
 
