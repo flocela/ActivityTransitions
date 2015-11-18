@@ -22,9 +22,10 @@ public class ActivityAA extends Activity {
       @Override
       public void onClick(View v) {
         Intent i = new Intent(ActivityAA.this, ActivityBB.class);
-        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
-          ActivityAA.this,
-          new Pair<View, String>(indigoDot, "dot_transition"));
+        ActivityOptions transitionActivityOptions =
+          ActivityOptions.makeSceneTransitionAnimation(
+            ActivityAA.this,
+            new Pair<View, String>(indigoDot, "dot_transition"));
         startActivity(i, transitionActivityOptions.toBundle());
       }
     });
@@ -36,7 +37,8 @@ public class ActivityAA extends Activity {
     slideTransition.setDuration(500);
     slideTransition.excludeTarget(android.R.id.statusBarBackground, true);
     slideTransition.excludeTarget(android.R.id.navigationBarBackground, true);
-    slideTransition.excludeTarget(getResources().getIdentifier("action_bar_container", "id", "android"), true);
+    slideTransition.excludeTarget(getResources().
+      getIdentifier("action_bar_container", "id", "android"), true);
     getWindow().setEnterTransition(slideTransition);
     getWindow().setExitTransition(slideTransition);
   }
